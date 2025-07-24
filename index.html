@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لودینگ</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #f9f9f9;
+      font-family: 'Tahoma', sans-serif;
+    }
+
+    .loader-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      animation: fadeOut 1s ease 3s forwards;
+      position: relative;
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      background-image: url('logo.png'); /* جایگزین کن با لوگوی واقعی */
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-bottom: 20px;
+    }
+
+    .app-name {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .version {
+      font-size: 14px;
+      color: #777;
+      margin-top: 5px;
+    }
+
+    .footer-box {
+      position: absolute;
+      bottom: 20px;
+      padding: 8px 20px;
+      background-color: #ececec;
+      border-radius: 10px;
+      font-size: 14px;
+      color: #555;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <body>
+  <div class="loader-wrapper" id="loader">
+    <img src="WhatsApp Image 2025-07-24 at 11.23.44 PM.jpeg" alt="لوگو" class="logo" />
+    <div class="app-name">ARiX4</div>
+    <div class="version">نسخه ۱.۰.۰</div>
+    <div class="footer-box">ساخته شده توسط برنامه پیکس وان</div>
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('loader').style.display = 'none';
+      }, 3000);
+    });
+
+    setTimeout(() => {
+      window.location.href = "home.html";
+    }, 4000);
+  </script>
+
+</body>
+</html>
