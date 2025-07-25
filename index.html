@@ -30,10 +30,7 @@
     .logo {
       width: 120px;
       height: 120px;
-      background-image: url('logo.png'); /* جایگزین کن با لوگوی واقعی */
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
+      object-fit: contain;
       margin-bottom: 20px;
     }
 
@@ -70,9 +67,8 @@
 </head>
 <body>
 
-  <body>
   <div class="loader-wrapper" id="loader">
-    <img src="WhatsApp Image 2025-07-24 at 11.23.44 PM.jpeg" alt="لوگو" class="logo" />
+    <img src="images/WhatsApp Image 2025-07-24 at 11.23.44 PM.jpeg" alt="لوگو" class="logo" />
     <div class="app-name">ARiX4</div>
     <div class="version">نسخه ۱.۰.۰</div>
     <div class="footer-box">ساخته شده توسط برنامه پیکس وان</div>
@@ -83,11 +79,11 @@
       setTimeout(() => {
         document.getElementById('loader').style.display = 'none';
       }, 3000);
-    });
 
-    setTimeout(() => {
-      window.location.href = "home.html";
-    }, 4000);
+      setTimeout(() => {
+        window.location.href = "home.html";
+      }, 4000);
+    });
   </script>
 
 </body>
